@@ -76,7 +76,7 @@ a {
 
   &:hover {
     text-decoration: none;
-    color: var(--blue);
+    color: var(--blue-hover);
     opacity: .7;
   }
 }
@@ -90,9 +90,11 @@ a {
   color: #fff;
   font-family: "Roboto";
   font-weight: 600;
+  opacity: 1 !important;
 
   &:hover {
     background-color: var(--blue-hover);
+    color: #fff;
   }
 
   &.clearWhite {
@@ -112,6 +114,16 @@ a {
 
     &:hover {
       background-color: rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &.clearGray {
+    background-color: transparent;
+    border: 1px solid #bcbcbc;
+    color: #000;
+
+    &:hover {
+      background-color: rgba(44, 44, 44, 0.15);
     }
   }
 
@@ -736,9 +748,183 @@ a {
   padding: 70px calc((100% - var(--desktopWidth)) / 2);
   margin-bottom: 170px;
   background-color: var(--gray-light);
-  
+
   &__video {
     width: 100%;
     height: fit-content;
+  }
+}
+
+
+.catalogPage {
+  width: 100%;
+  padding: 0 calc((100% - var(--desktopWidth)) / 2) 170px calc((100% - var(--desktopWidth)) / 2);
+
+  &__title {
+    font-size: var(--font-size-l);
+    line-height: var(--font-line-l);
+    margin-bottom: 31px;
+
+    span {
+      margin-left: 20px;
+      font-size: var(--font-size-xs);
+      line-height: var(--font-line-xs);
+      color: #5e5e5e;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+  }
+}
+
+.sidebar {
+  margin-top: 37px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+
+  &__item {
+    max-width: 200px;
+  }
+
+  &__parent {
+    max-width: 180px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      right: -40px;
+      width: 8px;
+      height: 10px;
+      background: url(/assets/img/icons/arrMore.svg) center/contain no-repeat;
+    }
+
+    &.noneArr::after {
+      display: none;
+    }
+  }
+}
+
+.catalog {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &__search {
+    position: relative;
+    display: flex;
+    padding: 12px 25px;
+    flex-direction: row;
+    transition: all .2s ease-in-out;
+    border: 1px #bcbcbc solid;
+    margin-bottom: 20px;
+
+    input {
+      position: relative;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      background-color: white;
+      z-index: 9;
+    }
+
+    button {
+      position: absolute;
+      z-index: 10;
+      width: 21px;
+      height: 21px;
+      top: 10px;
+      right: 10px;
+      background: url(/assets/img/icons/search.svg) center/contain no-repeat;
+      transition: all .2s ease-in-out;
+    }
+  }
+
+  &__filterbtn {
+    padding: 10px 45px 10px 20px;
+    position: relative;
+    margin-bottom: 32px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 15px;
+      width: 8px;
+      height: 100%;
+      background: url(/assets/img/icons/arrMore.svg) center/contain no-repeat;
+      transform: rotate(90deg);
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  &__more {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 55px;
+  }
+
+  &__pagination {
+    display: flex;
+    flex-direction: row;
+  }
+  &__number {
+    padding: 10px 20px;
+
+    &.active {
+      background-color: var(--gray-light);
+    }
+  }
+
+  &__pagination-more {
+    padding: 10px 20px;
+    margin-left: 10px;
+  }
+}
+
+.catalogItem {
+  width: calc((100% / 3) - (40px / 3));
+  border: 1px solid #000;
+  min-height: 430px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 14px 25px 14px;
+
+  &__img {
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+
+  &__title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__price {
+    font-size: var(--font-size-l);
+    line-height: var(--font-line-l);
+  }
+
+  &__more {
+    font-size: var(--font-size-m);
+    line-height: var(--font-line-m);
+    padding: 10px 13px;
   }
 }
