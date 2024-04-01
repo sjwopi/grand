@@ -13,6 +13,9 @@ body {
   --font-size-m: 18px;
   --font-line-m: 22px;
 
+  --font-size-ml: 22px;
+  --font-line-ml: 26px;
+
   --font-size-l: 30px;
   --font-line-l: 35px;
 
@@ -964,8 +967,8 @@ a {
   }
 
   &__subtitle {
-    font-size: 22px;
-    line-height: 26px;
+    font-size: var(--font-size-ml);
+    line-height: var(--font-line-ml);
   }
 
   &__img {
@@ -982,6 +985,7 @@ a {
 
 .contactsMap {
   margin: 70px auto 170px auto;
+
   &__title {
     margin-bottom: 90px;
   }
@@ -1005,5 +1009,78 @@ a {
     width: 660px;
     max-width: 90vw;
     margin: 0 auto;
+  }
+}
+
+.catalogItemPage {
+  width: 100%;
+  padding: 60px calc((100% - var(--desktopWidth)) / 2) 170px calc((100% - var(--desktopWidth)) / 2);
+
+  &__top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 70px;
+    margin-bottom: 70px;
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #000;
+  }
+
+  &__right {
+    width: 100%;
+    max-width: 500px;
+
+    p {
+      color: #5E5E5E;
+    }
+  }
+
+  &__name {
+    font-size: var(--font-size-ml);
+    line-height: var(--font-line-ml);
+    margin-bottom: 8px;
+  }
+
+  &__price {
+    margin: 32px 0 16px 0;
+  }
+
+  &__btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0 0 32px 0;
+  }
+
+  &__list {
+    padding: 0 0 16px 32px;
+
+    li {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 32px;
+  }
+
+  &__key {
+    font-size: var(--font-size-m);
+    line-height: var(--font-line-m);
+    margin-bottom: 32px;
+
+    &.small {
+      margin-bottom: 16px;
+    }
+  }
+  .deliveryPage__content {
+    margin: 90px 0 0 0;
   }
 }
