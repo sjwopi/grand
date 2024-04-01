@@ -14,8 +14,14 @@
 
 <body>
   <header class="header">
-    <a href="./index.html"><img src="./assets/img/icons/logo.svg" class="header__logo"></a>
+    <div class="header__container">
+      <a href="./index.html"><img src="./assets/img/icons/logo.svg" class="header__logo"></a>
 
+      <div class="header__container gap20mob">
+        <a href="tel:+78043331533" class="header__link phone">+7(804)333 15–33</a>
+        <a href="#contacts" class="header__contacts btn clearBlue">Заказать звонок</a>
+      </div>
+    </div>
     <nav class="header__container">
       <a href="./catalog.html" class="header__link">Каталог</a>
       <a href="./about.html" class="header__link">О компании</a>
@@ -34,12 +40,30 @@
     </div>
   </header>
 
+  <header class="header-mobile">
+    <a href="./index.html"><img src="./assets/img/icons/logo.svg" class="header-mobile__logo"></a>
+
+    <a href="tel:+78043331533" class="header-mobile__toplink">+7(804)333 15–33</a>
+
+    <div class="header-mobile__hambbtn" [ngClass]="{'open': isOpen}" (click)="changeOpenMobile()">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <section>
+
+  </section>
+
   <section class="mainOverlay">
     <img class="mainOverlay__img" src="./assets/img/mainOverlay.jpg" alt="колосья на лугу">
 
     <div class="mainOverlay__container">
       <h1 class="mainOverlay__title">Производство и реализация оборудования для создания комбикормов и древесных пеллет
       </h1>
+      <h1 class="mainOverlay__title mob">Оборудование для создания комбикормов и древесных пеллет</h1>
       <p class="mainOverlay__text">Наши технологии помогут вам повысить производительность, улучшить качество продукции
         и сэкономить ваше время и ресурсы</p>
       <div class="mainOverlay__btns">
@@ -64,7 +88,8 @@
         </div>
         <div class="aboutHome__item">
           <img class="aboutHome__item-img" src="./assets/img/icons/delivery.svg" alt="скидка">
-          <h3 class="aboutHome__item-text">Бесплатная доставка авиапарком компании</h3>
+          <h3 class="aboutHome__item-text desc">Бесплатная доставка авиапарком компании</h3>
+          <h3 class="aboutHome__item-text mob">Бесплатная доставка</h3>
         </div>
         <div class="aboutHome__item">
           <img class="aboutHome__item-img" src="./assets/img/icons/click.svg" alt="скидка">
@@ -72,7 +97,8 @@
         </div>
         <div class="aboutHome__item">
           <img class="aboutHome__item-img" src="./assets/img/icons/settings.svg" alt="скидка">
-          <h3 class="aboutHome__item-text">Комплексные системы автоматизации (ОВЕН/CoDeSys)</h3>
+          <h3 class="aboutHome__item-text desc">Комплексные системы автоматизации (ОВЕН/CoDeSys)</h3>
+          <h3 class="aboutHome__item-text mob">Cистемы автоматизации (ОВЕН/CoDeSys)</h3>
         </div>
       </div>
 
@@ -102,6 +128,32 @@
             кормов.</p>
         </div>
       </div>
+      
+
+      <div class="swiper catalogHome__swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide catalogHome__item">
+            <img class="catalogHome__item-img" src="./assets/img/Rectangle 4.jpg">
+            <h3 class="catalogHome__item-title">Оборудование для комбикорма</h3>
+            <p class="catalogHome__item-text">Профессиональное оборудование для изготовления рассыпных и гранулированных
+              кормов.</p>
+          </div>
+          <div class="swiper-slide catalogHome__item">
+            <img class="catalogHome__item-img" src="./assets/img/Rectangle 4.jpg">
+            <h3 class="catalogHome__item-title">Оборудование для комбикорма</h3>
+            <p class="catalogHome__item-text">Профессиональное оборудование для изготовления рассыпных и гранулированных
+              кормов.</p>
+          </div>
+          <div class="swiper-slide catalogHome__item">
+            <img class="catalogHome__item-img" src="./assets/img/Rectangle 4.jpg">
+            <h3 class="catalogHome__item-title">Оборудование для комбикорма</h3>
+            <p class="catalogHome__item-text">Профессиональное оборудование для изготовления рассыпных и гранулированных
+              кормов.</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn catalogHome__btn">Увидеть все</button>
     </section>
 
     <section class="partners">
@@ -127,7 +179,8 @@
           <h2 class="contacts__title">Оставьте заявку для консультации</h2>
           <input class="contacts__input" placeholder="Ваше имя*">
           <input class="contacts__input last" placeholder="Номер телефона*">
-          <a href="./policy.html" class="contacts__policy">Нажимая на кнопку «Отправить заявку»<br>Вы даёте согласие на обработку
+          <a href="./policy.html" class="contacts__policy">Нажимая на кнопку «Отправить заявку»<br>Вы даёте согласие на
+            обработку
             своих персональных данных</a>
           <button class="contacts__btn btn">Отправить заявку</button>
         </form>
@@ -162,13 +215,13 @@
       </div>
       <div class="footer__container">
         <span>Адрес:</span>
-        <p class="footer__link mb">г. Н. Новгород, ул. Геологов 1/10 к1</p>
+        <p class="footer__link mb">г. Н. Новгород, ул. Геологов 1/10 к1</p>
         <span>Адрес:</span>
         <a href="mailto:office@pkfgrand.ru" class="footer__link">office@pkfgrand.ru</a>
       </div>
     </div>
     <div class="footer__content bottom">
-      <p class="footer__footnote">©Logo - Все права защищены</p>
+      <p class="footer__footnote">©Logo - Все права защищены</p>
       <p class="footer__footnote">Политика конфиденциальности</p>
       <p class="footer__footnote">Публичная оферта</p>
     </div>
@@ -182,7 +235,7 @@
   <script>
     var swiper = new Swiper(".sliderPartners", {
       grabCursor: true,
-      slidesPerView: 3,
+      slidesPerView: window.innerWidth < 960 ? 1 : 3,
       spaceBetween: 70,
       pagination: {
         el: ".swiper-pagination",
@@ -191,6 +244,13 @@
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+    });
+
+    var swiper = new Swiper(".catalogHome__swiper", {
+      grabCursor: true,
+      freeMode: true,
+      slidesPerView: 'auto',
+      spaceBetween: 8
     });
   </script>
 </body>
