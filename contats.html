@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./index.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <header class="header">
+    <a href="./index.html"><img src="/assets/img/icons/logo.svg" class="header__logo"></a>
+
+    <nav class="header__container">
+      <a href="./catalog.html" class="header__link">Каталог</a>
+      <a href="./about.html" class="header__link">О компании</a>
+      <a href="./delivery.html" class="header__link">Доставка и оплата</a>
+      <a href="./contats.html" class="header__link">Контакты</a>
+
+      <div class="header__search">
+        <input name="searchHeader" id="searchHeader">
+        <button class="header__search-btn"></button>
+      </div>
+    </nav>
+
+    <div class="header__container gap20">
+      <a href="tel:+78043331533" class="header__link phone">+7(804)333 15–33</a>
+      <a href="#contacts" class="header__contacts btn clearBlue">Заказать звонок</a>
+    </div>
+  </header>
+
+
+  <main class="content">
+
+    
+    <section class="contacts" id="contacts">
+      <img class="contacts__img" src="/assets/img/contactsOverlay.jpg" alt="колосья на лугу">
+      <div class="contacts__container">
+        <form class="contacts__form">
+          <h2 class="contacts__title">Оставьте заявку для консультации</h2>
+          <input class="contacts__input" placeholder="Ваше имя*">
+          <input class="contacts__input last" placeholder="Номер телефона*">
+          <a href="./policy.html" class="contacts__policy">Нажимая на кнопку «Отправить заявку»<br>Вы даёте согласие на обработку
+            своих персональных данных</a>
+          <button class="contacts__btn btn">Отправить заявку</button>
+        </form>
+
+        <div class="contacts__content">
+          <h2 class="contacts__title">Контакты</h2>
+          <span>Многоканальный:</span>
+          <a href="tel:+78043331533">+7(804)333–15–33</a>
+          <a href="tel:+78312199727">+7 831 219-97-27</a>
+          <a class="last" href="tel:+79307105000">+7 930 710-50-00</a>
+          <span>Email:</span>
+          <a href="mailto:office@pkfgrand.ru">office@pkfgrand.ru</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img class="footer__logo" src="/assets/img/icons/logo.svg" alt="лого компании гранд">
+    <div class="footer__content">
+      <nav class="footer__container">
+        <a href="./catalog.html" class="footer__link">Каталог</a>
+        <a href="./about.html" class="footer__link">О компании</a>
+        <a href="./delivery.html" class="footer__link">Доставка и оплата</a>
+        <a href="./contats.html" class="footer__link">Контакты</a>
+      </nav>
+      <div class="footer__container">
+        <span>Многоканальный:</span>
+        <a href="tel:+78043331533" class="footer__link mb">+7(804)333–15–33</a>
+        <a href="tel:+78312199727" class="footer__link">+7 831 219-97-27</a>
+        <a href="tel:+79307105000" class="footer__link">+7 930 710-50-00</a>
+      </div>
+      <div class="footer__container">
+        <span>Адрес:</span>
+        <p class="footer__link mb">г. Н. Новгород, ул. Геологов 1/10 к1</p>
+        <span>Адрес:</span>
+        <a href="mailto:office@pkfgrand.ru" class="footer__link">office@pkfgrand.ru</a>
+      </div>
+    </div>
+    <div class="footer__content bottom">
+      <p class="footer__footnote">©Logo - Все права защищены</p>
+      <p class="footer__footnote">Политика конфиденциальности</p>
+      <p class="footer__footnote">Публичная оферта</p>
+    </div>
+  </footer>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
