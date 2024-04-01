@@ -121,6 +121,26 @@ a:hover {
   color: white;
 }
 
+.title {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: var(--font-size-xl);
+  line-height: var(--font-line-xl);
+  padding-left: 20px;
+  position: relative;
+  margin: 0 auto;
+}
+.title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 10px;
+  background-color: var(--blue-cian);
+}
+
 .header {
   height: 100px;
   width: 100%;
@@ -520,23 +540,7 @@ a:hover {
   margin: 70px auto 170px auto;
 }
 .about__title {
-  display: block;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: var(--font-size-xl);
-  line-height: var(--font-line-xl);
-  padding-left: 20px;
-  position: relative;
   margin: 0 auto 70px auto;
-}
-.about__title::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 10px;
-  background-color: var(--blue-cian);
 }
 .about__text {
   margin-bottom: 18px;
@@ -811,4 +815,67 @@ a:hover {
   font-size: var(--font-size-m);
   line-height: var(--font-line-m);
   padding: 10px 13px;
+}
+
+.deliveryPage {
+  width: 100%;
+  padding: 70px calc((100% - var(--desktopWidth)) / 2) 170px calc((100% - var(--desktopWidth)) / 2);
+}
+.deliveryPage__title {
+  margin-bottom: 90px;
+}
+.deliveryPage__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.deliveryPage__content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.deliveryPage__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+.deliveryPage__subtitle {
+  font-size: 22px;
+  line-height: 26px;
+}
+.deliveryPage__img {
+  height: 50px;
+  width: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.deliveryPage__btn {
+  background-color: var(--gray);
+  padding: 14px 23px;
+}
+
+.contactsMap {
+  margin: 70px auto 170px auto;
+}
+.contactsMap__title {
+  margin-bottom: 90px;
+}
+.contactsMap__map {
+  margin: 0 auto 32px auto;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.contactsMap__map * {
+  border: none !important;
+}
+.contactsMap__map iframe {
+  width: 660px;
+  height: 330px;
+  max-width: 90vw;
+}
+.contactsMap__btn {
+  width: 660px;
+  max-width: 90vw;
+  margin: 0 auto;
 }

@@ -140,6 +140,26 @@ a {
 
 }
 
+.title {
+  display: block;
+  width: fit-content;
+  font-size: var(--font-size-xl);
+  line-height: var(--font-line-xl);
+  padding-left: 20px;
+  position: relative;
+  margin: 0 auto;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 10px;
+    background-color: var(--blue-cian);
+  }
+}
+
 
 .header {
   height: 100px;
@@ -600,23 +620,7 @@ a {
   margin: 70px auto 170px auto;
 
   &__title {
-    display: block;
-    width: fit-content;
-    font-size: var(--font-size-xl);
-    line-height: var(--font-line-xl);
-    padding-left: 20px;
-    position: relative;
     margin: 0 auto 70px auto;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 10px;
-      background-color: var(--blue-cian);
-    }
   }
 
   &__text {
@@ -882,6 +886,7 @@ a {
     display: flex;
     flex-direction: row;
   }
+
   &__number {
     padding: 10px 20px;
 
@@ -926,5 +931,79 @@ a {
     font-size: var(--font-size-m);
     line-height: var(--font-line-m);
     padding: 10px 13px;
+  }
+}
+
+
+
+.deliveryPage {
+  width: 100%;
+  padding: 70px calc((100% - var(--desktopWidth)) / 2) 170px calc((100% - var(--desktopWidth)) / 2);
+
+  &__title {
+    margin-bottom: 90px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__subtitle {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  &__img {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+  }
+
+  &__btn {
+    background-color: var(--gray);
+    padding: 14px 23px;
+  }
+}
+
+.contactsMap {
+  margin: 70px auto 170px auto;
+  &__title {
+    margin-bottom: 90px;
+  }
+
+  &__map {
+    margin: 0 auto 32px auto;
+    width: fit-content;
+
+    * {
+      border: none !important;
+    }
+
+    iframe {
+      width: 660px;
+      height: 330px;
+      max-width: 90vw;
+    }
+  }
+
+  &__btn {
+    width: 660px;
+    max-width: 90vw;
+    margin: 0 auto;
   }
 }
