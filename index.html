@@ -45,17 +45,37 @@
 
     <a href="tel:+78043331533" class="header-mobile__toplink">+7(804)333 15–33</a>
 
-    <div class="header-mobile__hambbtn" [ngClass]="{'open': isOpen}" (click)="changeOpenMobile()">
+    <div class="header-mobile__hambbtn">
       <span></span>
       <span></span>
       <span></span>
       <span></span>
     </div>
+
+    <div class="header-mobile__container">
+      <div class="header-mobile__search">
+        <input placeholder="Поиск услуг или товаров">
+        <button class="header-mobile__search-btn"></button>
+      </div>
+
+      <button class="btn header-mobile__btn">Заказать звонок</button>
+
+      <nav class="header-mobile__nav">
+        <a href="./catalog.html" class="header-mobile__link">Каталог</a>
+        <a href="./about.html" class="header-mobile__link">О компании</a>
+        <a href="./delivery.html" class="header-mobile__link">Доставка и оплата</a>
+        <a href="./contats.html" class="header-mobile__link">Контакты</a>
+      </nav>
+
+      <div class="header-mobile__bottom">
+        <span>Адрес:</span>
+        <p class="header-mobile__link mb">г. Н. Новгород, ул. Геологов 1/10 к1</p>
+        <span>Emal:</span>
+        <p><a href="mailto:office@pkfgrand.ru" class="header-mobile__link">office@pkfgrand.ru</a></p>
+      </div>
+    </div>
   </header>
 
-  <section>
-
-  </section>
 
   <section class="mainOverlay">
     <img class="mainOverlay__img" src="./assets/img/mainOverlay.jpg" alt="колосья на лугу">
@@ -128,7 +148,7 @@
             кормов.</p>
         </div>
       </div>
-      
+
 
       <div class="swiper catalogHome__swiper">
         <div class="swiper-wrapper">
@@ -216,7 +236,7 @@
       <div class="footer__container">
         <span>Адрес:</span>
         <p class="footer__link mb">г. Н. Новгород, ул. Геологов 1/10 к1</p>
-        <span>Адрес:</span>
+        <span>Emal:</span>
         <a href="mailto:office@pkfgrand.ru" class="footer__link">office@pkfgrand.ru</a>
       </div>
     </div>

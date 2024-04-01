@@ -21,6 +21,14 @@ body {
   --gray-light: #F6F6F6;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body.open {
+  overflow: hidden;
+}
+
 * {
   font-family: "Nunito";
   color: #000;
@@ -267,6 +275,7 @@ a:hover {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 .header-mobile__hambbtn {
   min-width: 27px;
@@ -326,6 +335,77 @@ a:hover {
 .header-mobile__logo {
   width: 82px;
   height: 23px;
+}
+.header-mobile.open .header-mobile__container {
+  left: 0 !important;
+}
+.header-mobile__container {
+  position: absolute;
+  left: -100%;
+  top: 100%;
+  width: 100%;
+  height: calc(100vh - 100%);
+  border-top: 1px #000 solid;
+  background-color: white;
+  z-index: 20;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  padding: 23px;
+}
+.header-mobile__container::-webkit-scrollbar {
+  display: none;
+}
+.header-mobile__search {
+  position: relative;
+  display: flex;
+  padding: 12px 25px;
+  flex-direction: row;
+  transition: all 0.2s ease-in-out;
+  border: 1px #bcbcbc solid;
+  margin-bottom: 15px;
+}
+.header-mobile__search input {
+  position: relative;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: white;
+  z-index: 9;
+}
+.header-mobile__search button {
+  position: absolute;
+  z-index: 10;
+  width: 21px;
+  height: 21px;
+  top: 10px;
+  right: 10px;
+  background: url(./assets/img/icons/search.svg) center/contain no-repeat;
+  transition: all 0.2s ease-in-out;
+}
+.header-mobile__btn {
+  width: 100%;
+  margin-bottom: 36px;
+}
+.header-mobile__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 60px;
+}
+.header-mobile__link {
+  font-family: "Roboto";
+  font-weight: 600;
+  font-size: var(--font-size-m);
+  line-height: var(--font-line-m);
+}
+.header-mobile__bottom span {
+  margin-bottom: 8px;
+}
+.header-mobile__bottom p {
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 1350px) {
