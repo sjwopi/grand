@@ -855,6 +855,7 @@ a:hover {
 .deliveryPage__btn {
   background-color: var(--gray);
   padding: 14px 23px;
+  cursor: default;
 }
 
 .contactsMap {
@@ -885,6 +886,9 @@ a:hover {
 .catalogItemPage {
   width: 100%;
   padding: 60px calc((100% - var(--desktopWidth)) / 2) 170px calc((100% - var(--desktopWidth)) / 2);
+  display: flex;
+  flex-direction: row;
+  gap: 120px;
 }
 .catalogItemPage__top {
   display: flex;
