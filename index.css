@@ -31,7 +31,7 @@ body.open {
 
 * {
   font-family: "Nunito";
-  color: #000;
+  color: #2e2e2e;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -47,6 +47,7 @@ h5,
 h6 {
   font-family: "Roboto";
   font-weight: 600;
+  color: #000;
 }
 
 a,
@@ -83,6 +84,7 @@ a:hover {
 }
 
 .btn {
+  text-align: center;
   display: block;
   width: -moz-fit-content;
   width: fit-content;
@@ -966,6 +968,15 @@ a:hover {
   padding-top: 14px;
 }
 
+@media screen and (max-width: 960px) {
+  .about {
+    max-width: var(--desktopWidth);
+    margin: 55px auto;
+  }
+  .about__title {
+    margin-bottom: 36px;
+  }
+}
 .target {
   width: 100%;
   padding: 55px calc((100% - var(--desktopWidth)) / 2 + 50px);
@@ -978,6 +989,11 @@ a:hover {
   margin-bottom: 16px;
 }
 
+@media screen and (max-width: 960px) {
+  .target {
+    padding: 55px calc((100% - var(--desktopWidth)) / 2);
+  }
+}
 .term {
   width: 100%;
   padding: 170px calc((100% - var(--desktopWidth)) / 2);
@@ -1032,6 +1048,58 @@ a:hover {
      object-fit: contain;
 }
 
+@media screen and (max-width: 1350px) {
+  .term__right {
+    width: 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 960px) {
+  .term__item {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .term__left {
+    width: 100%;
+    border: none;
+    border-top: 1px solid black;
+    gap: 16px;
+  }
+  .term__left.first {
+    border: none;
+  }
+  .term__right {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 780px) {
+  .term {
+    padding: 70px calc((100% - var(--desktopWidth)) / 2);
+    gap: 36px;
+  }
+  .term__img {
+    width: 35px;
+    height: 35px;
+  }
+  .term__subtitle {
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: var(--font-size-s);
+    line-height: var(--font-line-s);
+  }
+  .term__table {
+    gap: 0;
+  }
+  .term__left {
+    padding: 16px 0;
+  }
+  .term__right {
+    font-size: var(--font-size-xs);
+    line-height: var(--font-line-xs);
+  }
+}
 .aboutPartners {
   width: 100%;
   padding: 0 calc((100% - var(--desktopWidth)) / 2) 170px calc((100% - var(--desktopWidth)) / 2);
@@ -1065,6 +1133,22 @@ a:hover {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 960px) {
+  .aboutPartners__container {
+    gap: 20px;
+  }
+  .aboutPartners__img {
+    width: calc(33.3333333333% - 13.3333333333px);
+  }
+}
+@media screen and (max-width: 780px) {
+  .aboutPartners {
+    padding-bottom: 70px;
+  }
+  .aboutPartners__btn {
+    width: 100%;
+  }
+}
 .aboutVideo {
   width: 100%;
   padding: 70px calc((100% - var(--desktopWidth)) / 2);

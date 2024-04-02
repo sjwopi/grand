@@ -40,7 +40,7 @@ body.open {
 
 * {
   font-family: "Nunito";
-  color: #000;
+  color: #2e2e2e;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -56,6 +56,7 @@ h5,
 h6 {
   font-family: "Roboto";
   font-weight: 600;
+  color: #000;
 }
 
 a,
@@ -94,6 +95,7 @@ a {
 
 
 .btn {
+  text-align: center;
   display: block;
   width: fit-content;
   padding: 17px 37px;
@@ -405,6 +407,7 @@ a {
       left: 0 !important;
     }
   }
+
   &__container {
     position: absolute;
     left: -100%;
@@ -474,10 +477,12 @@ a {
     font-size: var(--font-size-m);
     line-height: var(--font-line-m);
   }
+
   &__bottom {
     span {
       margin-bottom: 8px;
     }
+
     p {
       margin-bottom: 20px;
     }
@@ -801,6 +806,7 @@ a {
       &:first-child {
         margin-left: calc((100% - var(--desktopWidth)) / 2);
       }
+
       &:last-child {
         margin-right: calc((100% - var(--desktopWidth)) / 2);
       }
@@ -864,12 +870,14 @@ a {
     padding: 110px 0;
   }
 }
+
 @media screen and (max-width: 960px) {
   .partners {
     width: calc(var(--desktopWidth) + 80px);
     padding: 110px 0;
   }
 }
+
 @media screen and (max-width: 780px) {
   .partners {
     width: calc(var(--desktopWidth) + 0px);
@@ -879,6 +887,7 @@ a {
     }
   }
 }
+
 @media screen and (max-width: 480px) {
   .partners {
     width: var(--desktopWidth);
@@ -886,15 +895,18 @@ a {
     .swiper {
       padding: 0 30px;
     }
+
     .swiper-pagination {
       bottom: -30px !important;
     }
+
     .swiper-button-next::after,
     .swiper-button-prev::after {
       transform: scale(.5);
     }
   }
 }
+
 .contacts {
   width: 100%;
   padding: 130px calc((100% - var(--desktopWidth)) / 2);
@@ -1006,14 +1018,17 @@ a {
     &__title {
       margin-bottom: 36px;
     }
+
     &__form {
       width: 100%;
     }
+
     &__content {
       display: none;
     }
   }
 }
+
 .footer {
   width: 100%;
   padding: 70px calc((100% - var(--desktopWidth)) / 2) 90px calc((100% - var(--desktopWidth)) / 2);
@@ -1143,6 +1158,16 @@ a {
   }
 }
 
+@media screen and (max-width: 960px) {
+  .about {
+    max-width: var(--desktopWidth);
+    margin: 55px auto;
+
+    &__title {
+      margin-bottom: 36px;
+    }
+  }
+}
 .target {
   width: 100%;
   padding: 55px calc((100% - var(--desktopWidth)) / 2 + 50px);
@@ -1154,6 +1179,12 @@ a {
     color: var(--blue-cian);
     margin-bottom: 16px;
     ;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .target {
+    padding: 55px calc((100% - var(--desktopWidth)) / 2);
   }
 }
 
@@ -1216,6 +1247,72 @@ a {
   }
 }
 
+@media screen and (max-width: 1350px) {
+  .term {
+    &__right {
+      width: 50%;
+      max-width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .term {
+    &__item {
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    &__left {
+      width: 100%;
+      border: none;
+      border-top: 1px solid black;
+      gap: 16px;
+
+      &.first {
+        border: none;
+      }
+    }
+
+    &__right {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .term {
+    padding: 70px calc((100% - var(--desktopWidth)) / 2);
+    gap: 36px;
+
+    &__img {
+      width: 35px;
+      height: 35px;
+    }
+
+    &__subtitle {
+      font-family: "Nunito";
+      font-weight: 700;
+      font-size: var(--font-size-s);
+      line-height: var(--font-line-s);
+    }
+    &__table {
+      gap: 0;
+    }
+
+    &__left {
+      padding: 16px 0;
+    }
+
+    &__right {
+      font-size: var(--font-size-xs);
+      line-height: var(--font-line-xs);
+    }
+  }
+}
+
 .aboutPartners {
   width: 100%;
   padding: 0 calc((100% - var(--desktopWidth)) / 2) 170px calc((100% - var(--desktopWidth)) / 2);
@@ -1251,6 +1348,28 @@ a {
   &__btn {
     padding: 17px 60px;
     margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .aboutPartners {
+    &__container {
+      gap: 20px;
+    }
+
+    &__img {
+      width: calc((100% / 3) - (40px / 3));
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .aboutPartners {
+    padding-bottom: 70px;
+
+    &__btn {
+      width: 100%;
+    }
   }
 }
 

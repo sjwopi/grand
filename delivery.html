@@ -14,8 +14,14 @@
 
 <body>
   <header class="header">
-    <a href="./index.html"><img src="./assets/img/icons/logo.svg" class="header__logo"></a>
+    <div class="header__container">
+      <a href="./index.html"><img src="./assets/img/icons/logo.svg" class="header__logo"></a>
 
+      <div class="header__container gap20mob">
+        <a href="tel:+78043331533" class="header__link phone">+7(804)333 15–33</a>
+        <a href="#contacts" class="header__contacts btn clearBlue">Заказать звонок</a>
+      </div>
+    </div>
     <nav class="header__container">
       <a href="./catalog.html" class="header__link">Каталог</a>
       <a href="./about.html" class="header__link">О компании</a>
@@ -31,6 +37,42 @@
     <div class="header__container gap20">
       <a href="tel:+78043331533" class="header__link phone">+7(804)333 15–33</a>
       <a href="#contacts" class="header__contacts btn clearBlue">Заказать звонок</a>
+    </div>
+  </header>
+
+  <header class="header-mobile">
+    <a href="./index.html"><img src="./assets/img/icons/logo.svg" class="header-mobile__logo"></a>
+
+    <a href="tel:+78043331533" class="header-mobile__toplink">+7(804)333 15–33</a>
+
+    <div class="header-mobile__hambbtn">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="header-mobile__container">
+      <div class="header-mobile__search">
+        <input placeholder="Поиск услуг или товаров">
+        <button class="header-mobile__search-btn"></button>
+      </div>
+
+      <button class="btn header-mobile__btn">Заказать звонок</button>
+
+      <nav class="header-mobile__nav">
+        <a href="./catalog.html" class="header-mobile__link">Каталог</a>
+        <a href="./about.html" class="header-mobile__link">О компании</a>
+        <a href="./delivery.html" class="header-mobile__link">Доставка и оплата</a>
+        <a href="./contats.html" class="header-mobile__link">Контакты</a>
+      </nav>
+
+      <div class="header-mobile__bottom">
+        <span>Адрес:</span>
+        <p class="header-mobile__link mb">г. Н. Новгород, ул. Геологов 1/10 к1</p>
+        <span>Emal:</span>
+        <p><a href="mailto:office@pkfgrand.ru" class="header-mobile__link">office@pkfgrand.ru</a></p>
+      </div>
     </div>
   </header>
 
